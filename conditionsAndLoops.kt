@@ -223,7 +223,7 @@ fun main(){
                 continue@test
             }
 
-            print("$j$i ")
+            print("$j$i ") // space after $j$i prevents cluttering of of values
         }
         println()
     }
