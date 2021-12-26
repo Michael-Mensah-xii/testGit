@@ -157,13 +157,76 @@ fun main(){
             println("k = $k")
         k++}
     }while (l < 5)
+    
+    
+    // nested loops
+    println("\n--Nested Loop test--")
+    for (o in 1..6){// outer loop
+        for(j in 'A'..'F'){// inner loop
+            print("$j$o ")// space to help de-clutter
+        }
+        println()//
+    }
+
+    // Jump Expressions
+    // break
+    println("\n--for break expression--")
+    var numsRandom = listOf(1,2,4,6,5,8,14,13,10,3)
+    for (num in numsRandom){
+        if (num > 10){
+            break// stops once condition is met
+        }
+        println(num)
+    }
+
+    //continue
+    println("\n--for continue expression--")
+    var numRandom = listOf(1,2,4,6,5,8,14,13,10,3)
+    for (num in numRandom){
+        if (num > 10){
+            continue // skips once one condition is met and goes back to check for another
+        }
+        println(num)
+    }
+
+    // example 2
+    println("\n--for continue and break expression--")
+
+    val rooms = listOf("Kitchen", "Living Room", "Basement", "Bathroom")
+    for (room in rooms) {
+        print("$room: ")
+
+        if (room == "Living Room") {
+            println("Found It!")
+            break
+        }
+        println("Found Nothing.")
+    }
+
+    println("\n-- Divide By Zero --")
+    for (number in 12 downTo -12 step 4) {
+
+        if (number == 0) {
+            continue
+        }
+
+        println("120/number = ${120 / number}")
+    }
 
 
+    // Labelled Jump
+     println("\n--Labelled jump test--")
+    test@ for (i in 1..6) {
+        for (j in 'A'..'F') {
+            // Write your code below
+            if (j == 'C'){
+                continue@test
+            }
 
-
-
-
-
+            print("$j$i ")
+        }
+        println()
+    }
 
 
 }
