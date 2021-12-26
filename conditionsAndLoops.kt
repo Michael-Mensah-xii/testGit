@@ -146,6 +146,18 @@ fun main(){
         m++
     }while (x == 3)
     println("m = $m")
+    
+    // test 2
+    println("\n --do while 2--")
+    var l = 0
+    do {
+        println(l++)
+        var k = 0
+        while (k < 5){
+            println("k = $k")
+        k++}
+    }while (l < 5)
+
 
 
 
